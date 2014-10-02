@@ -1,0 +1,17 @@
+INDEX VERSION 1.127+C:\Users\Benjamin Daly\Documents\GitHub\cp2013javaBowling\.metadata\.plugins\org.eclipse.jdt.core
+3133528496.index
+4155206848.index
+1115467115.index
+30765161.index
+163172794.index
+4108727661.index
+2252583087.index
+1697886153.index
+305854171.index
+2161696959.index
+3974580528.index
+1299022128.index
+1995173708.index
+1498219845.index
+3065916431.index
+4041092966.index

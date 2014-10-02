@@ -1,0 +1,43 @@
+package bowlingJava;
+
+import com.mongodb.BasicDBObject;
+import com.mongodb.BulkWriteOperation;
+import com.mongodb.BulkWriteResult;
+import com.mongodb.Cursor;
+import com.mongodb.DB;
+import com.mongodb.DBCollection;
+import com.mongodb.DBCursor;
+import com.mongodb.DBObject;
+import com.mongodb.MongoClient;
+import com.mongodb.ParallelScanOptions;
+
+import java.net.UnknownHostException;
+import java.util.List;
+import java.util.Set;
+
+import static java.util.concurrent.TimeUnit.SECONDS;
+public class dbConnect {
+	public static void main(final String[] args) throws UnknownHostException {
+		System.out.println("start");
+		try {
+			//connect to the local database server
+			MongoClient mongoClient = new MongoClient("localhost", 27017);
+			
+			DB db = mongoClient.getDB("cp2013Bowling");
+			boolean auth = db.authenticate("williammurdoch451@gmail.com", "test1234".toCharArray());
+			
+			System.out.println("Success");
+			
+		} catch (Exception e) {
+			System.out.println("Fail");
+		}
+		
+	
+		
+	}
+	
+	
+	
+	
+
+}
