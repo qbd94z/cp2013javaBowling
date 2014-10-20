@@ -9,7 +9,6 @@ INDEX VERSION 1.127+C:\Users\Benjamin Daly\Documents\GitHub\cp2013javaBowling\.m
 2252583087.index
 1697886153.index
 305854171.index
-2161696959.index
 3974580528.index
 1299022128.index
 1995173708.index

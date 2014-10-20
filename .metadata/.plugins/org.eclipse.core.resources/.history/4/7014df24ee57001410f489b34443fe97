@@ -1,0 +1,27 @@
+package bowlingJava;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JFrame;
+
+public class mainMenuGUI {
+		public static void main(String[] args) {
+			JFrame mainMenu = new JFrame("Bowling - Main Menu");
+			mainMenu.setSize(400, 800);
+			
+			JButton b1 = new JButton("Button 1");
+			b1.setSize(10, 10);
+			
+			JButton b2 = new JButton("Button 2");
+			b2.setSize(10, 10);
+			
+			mainMenu.add(b1);
+			mainMenu.setVisible(true);
+			
+		}
+		
+		
+		
+
+	}
+

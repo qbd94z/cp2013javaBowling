@@ -1,0 +1,23 @@
+package bowlingJava;
+
+import java.util.Scanner;
+
+public class test {
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		String gameName;
+		int numOfPlayers;
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter Game Name: ");
+		gameName = input.nextLine();
+		System.out.println("Game Name is :" + gameName);
+		System.out.println("Enter Number of players: ");
+		numOfPlayers = input.nextInt();
+		System.out.println("Number of players: " + numOfPlayers);
+		
+		
+		
+		
+	}
+
+}

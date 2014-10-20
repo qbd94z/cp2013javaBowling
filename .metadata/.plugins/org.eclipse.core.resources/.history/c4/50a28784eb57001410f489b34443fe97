@@ -1,0 +1,18 @@
+package bowlingJava;
+
+import javax.swing.JFrame;
+import javax.swing.JFrame;
+
+public class mainMenuGUI {
+		public static void main(String[] args) {
+			JFrame mainMenu = new JFrame("Bowling - Main Menu");
+			mainMenu.pack();
+			mainMenu.setVisible(true);
+			
+		}
+		
+		
+		
+
+	}
+

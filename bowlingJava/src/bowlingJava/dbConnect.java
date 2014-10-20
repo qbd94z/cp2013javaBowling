@@ -20,15 +20,16 @@ public class dbConnect {
 			//connect to the local database server
 			String dbURI = "mongodb://ben:test1234@kahana.mongohq.com:10098/cp2013Bowling";
 			MongoClient mongoClient = new MongoClient(new MongoClientURI(dbURI));
-			System.out.println("Connection Success");
+			System.out.println("Connection: Successful");
 			
 			DB db = mongoClient.getDB("cp2013Bowling");
-			System.out.println(db);
+			System.out.println("Database: " + db);
 			
 			Set<String> collection = db.getCollectionNames();
-			System.out.println(collection);
+			System.out.println("Collections: " + collection);
 			
 			DBCollection coll = db.getCollection("test");
+			System.out.println("Test Collection");
 			System.out.println(coll);
 			
 			BasicDBObject doc =  new BasicDBObject("name", "MongoDB")
@@ -40,7 +41,15 @@ public class dbConnect {
 			
 			System.out.println(mydoc);
 			
-			System.out.println(coll.getCount());
+			//System.out.println(coll.getCount());
+			
+			String[][] players = {
+					{"ben", "2", "2", "4", "5", "6", "6" }
+			};
+			
+			//System.out.println(players.toString());
+			
+	
 			
 			
 			
