@@ -1,0 +1,47 @@
+package bowlingJava;
+
+import java.awt.Dimension;
+import java.awt.List;
+import java.util.ArrayList;
+
+import javax.swing.BoxLayout;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+public class gameGUI {
+
+	public static void setup() {
+		JFrame gameFrame = new JFrame("Bowling - Game"); 
+		gameFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		gameFrame.setPreferredSize(new Dimension(1600, 1000));
+		gameFrame.pack();
+		
+		JPanel container = new JPanel();
+		container.setLayout(new BoxLayout(container, BoxLayout.Y_AXIS));
+		gameFrame.add(container);
+	
+		
+		int players = 2;
+		ArrayList<frames> playerList = new ArrayList<frames>();
+		for (int i = 0; i < players; i++) {
+			playerList.add(new frames());
+			
+		}
+		
+		for (frames frame : playerList) {
+			System.out.println(frame);
+			frame.setf10B3("40");
+			container.add(frame);
+			
+		}
+		
+	
+	
+		gameFrame.add(container);
+		gameFrame.setVisible(true);
+				
+		
+	}
+}

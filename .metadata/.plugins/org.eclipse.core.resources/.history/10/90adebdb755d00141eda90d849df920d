@@ -1,0 +1,73 @@
+package bowlingJava;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class saveGameGUI {
+	public static void main(String[] args) {
+		System.out.println("hello World - save game");
+		
+	}	
+	
+	public static void saveGameFrame() {
+		final JFrame saveGame = new JFrame("Bowling - Save Game");
+		JPanel saveGamePanel = new JPanel();
+		
+		
+		
+		saveGame.setSize(400, 800);
+		
+		JButton test = new JButton("Save Game");
+		test.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				System.out.println("Hello World");
+				
+			}
+		});
+		
+		JButton mainMenu = new JButton("Close");
+		mainMenu.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				saveGame.setVisible(false);
+				
+				
+			}
+		});
+		
+		
+		
+		saveGamePanel.add(test);
+		saveGamePanel.add(mainMenu);
+		saveGame.add(saveGamePanel);
+		saveGame.setVisible(true);
+	}
+	
+	public void savePlayers(ArrayList playerList){
+		
+		frames player1 = (frames) playerList.get(0);
+		frames player2 = (frames) playerList.get(1);
+		
+		System.out.println(player1.getName());
+		System.out.println(player2.getName());
+		
+		ArrayList<String> p1 = new ArrayList<String>();
+		p1.add(player1.getName());
+		p1.add(player1.getf1B1());
+		
+		for (String string : p1) {
+			System.out.println(string);
+			
+		}
+		
+	}
+
+}

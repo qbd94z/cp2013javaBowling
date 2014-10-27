@@ -38,8 +38,22 @@ public class newGameGUI {
 			}
 		});
 		
+		JButton startGame = new JButton("Start Game");
+		startGame.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				System.out.println("Hello World");
+				gameGUI game = new gameGUI();
+				game.setup();
+				newGame.setVisible(false);
+				
+				
+			}
+		});
 		
 		
+		newGamePanel.add(startGame);
 		newGamePanel.add(test);
 		newGamePanel.add(mainMenu);
 		newGame.add(newGamePanel);

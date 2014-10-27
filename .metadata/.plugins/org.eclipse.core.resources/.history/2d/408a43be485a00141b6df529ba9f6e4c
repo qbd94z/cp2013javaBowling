@@ -1,0 +1,34 @@
+package bowlingJava;
+
+import java.awt.BorderLayout;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+public class gameGUI {
+
+	public static void setup() {
+		JFrame gameFrame = new JFrame("Bowling - Game"); 
+		gameFrame.setLayout(null);
+		JPanel gamePanel = new JPanel();
+		
+		JLabel playerName = new JLabel("Ben");
+		
+		//panel.setLayout(new FlowLayout(FlowLayout.LEFT));
+		//frame.getContentPane().add(yellowLabel, BorderLayout.CENTER)
+		
+		
+		
+		gamePanel.setSize(1550, 950);
+		gameFrame.setSize(1600, 1000);
+		
+		//gamePanel.add(playerName);
+		gameFrame.add(gamePanel);
+		
+		//gameFrame.pack();
+		gameFrame.setVisible(true);
+				
+		
+	}
+}

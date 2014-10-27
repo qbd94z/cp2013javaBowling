@@ -1,0 +1,28 @@
+package bowlingJava;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+public class gameGUI {
+
+	public static void main() {
+		JFrame gameFrame = new JFrame("Bowling - Game"); 
+		//gameFrame.setLayout(null);
+		JPanel gamePanel = new JPanel();
+		//gamePanel.setLayout(null);
+		
+		JLabel playerName = new JLabel("Ben");
+		playerName.setLocation(300, 400);
+		
+		
+		gamePanel.setSize(1550, 950);
+		gameFrame.setSize(1600, 1000);
+		
+		gamePanel.add(playerName);
+		gameFrame.add(gamePanel);
+		gameFrame.setVisible(true);
+				
+		
+	}
+}
