@@ -1,0 +1,10 @@
+package bowlingJava;
+
+public class loadGame {
+	public void load(){
+		dbConnect connect = new dbConnect();
+		connect.download();
+	}
+	
+
+}

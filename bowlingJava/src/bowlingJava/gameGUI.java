@@ -1,24 +1,21 @@
 package bowlingJava;
 
-import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.GridLayout;
-import java.awt.List;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 import javax.swing.BoxLayout;
-import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.plaf.basic.BasicOptionPaneUI.ButtonActionListener;
 
 public class gameGUI {
+	
 
-	public static void setup() {
+	public static void setup(final String gameName, String p1Name, String p2Name) {
 		final JFrame gameFrame = new JFrame("Bowling - Game"); 
 		gameFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		gameFrame.setPreferredSize(new Dimension(1600, 1000));
@@ -27,6 +24,9 @@ public class gameGUI {
 		JPanel container = new JPanel();
 		container.setLayout(new BoxLayout(container, BoxLayout.Y_AXIS));
 		gameFrame.add(container);
+		
+		JLabel gn = new JLabel(gameName);
+		container.add(gn);
 	
 		
 		int players = 2;
@@ -40,27 +40,29 @@ public class gameGUI {
 			container.add(frame);
 		}
 		
-	//test
+		
 		
 		frames player1 = playerList.get(0);
 		frames player2 = playerList.get(1);
-		//player1.setName("Ben");
-		//player2.setName("George");
+		
+		player1.setName(p1Name);
+		player2.setName(p2Name);
+		
 				
 		JButton saveGame = new JButton("Save Game");
 		saveGame.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				System.out.println("Hello World");
-				saveGameGUI save = new saveGameGUI();
-				save.saveGameFrame(playerList);
+				saveGame save = new saveGame();
+				save.save(playerList, gameName);
 			}
 		});
 		
 		JButton mainMenu = new JButton("Main Menu");
 		mainMenu.addActionListener(new ActionListener() {
 			
+			@SuppressWarnings("static-access")
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				mainMenuGUI mm = new mainMenuGUI();
@@ -181,10 +183,6 @@ public class gameGUI {
 			getButton(bX.getText());
 		}
 	});
-	
-
-	
-	
 		
 		System.out.println("A");
 		System.out.println(b1.getText());
@@ -206,17 +204,13 @@ public class gameGUI {
 		keys.add(b0);
 		keys.add(bhalf);
 		keys.add(bX);
-		
 	
-		
-		
-		
-		
-		container.add(mainMenu);
-		container.add(saveGame);
+	
 		container.add(keys);
 		gameFrame.add(container);
-		//gameFrame.add(keys);
+	
+		container.add(mainMenu);
+		container.add(saveGame);
 		gameFrame.setVisible(true);
 				
 		
@@ -224,6 +218,7 @@ public class gameGUI {
 	
 	public static String getButton(String value){
 		System.out.println("Button Value: " + value);
+	
 		return value;
 		
 	}

@@ -1,6 +1,5 @@
 package bowlingJava;
 
-import java.lang.reflect.Array;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -31,8 +30,6 @@ public class test {
 			System.out.println("Player number: " + i + " Name: " + players[i].toString());
 			
 		}
-		 
-		Map<Object,String> gamePlayers = new HashMap<Object, String>();
 	}
 
 }

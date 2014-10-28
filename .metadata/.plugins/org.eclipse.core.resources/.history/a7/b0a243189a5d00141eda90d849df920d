@@ -1,0 +1,79 @@
+package bowlingJava;
+
+	import java.awt.Dimension;
+	import java.awt.List;
+	import java.awt.event.ActionEvent;
+	import java.awt.event.ActionListener;
+	import java.util.ArrayList;
+
+	import javax.swing.BoxLayout;
+	import javax.swing.JButton;
+	import javax.swing.JFrame;
+	import javax.swing.JLabel;
+	import javax.swing.JPanel;
+
+	public class loadedGameGUI {
+
+		public static void setup(ArrayList players) {
+			final JFrame gameFrame = new JFrame("Bowling - Game"); 
+			gameFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			gameFrame.setPreferredSize(new Dimension(1600, 1000));
+			gameFrame.pack();
+			
+			JPanel container = new JPanel();
+			container.setLayout(new BoxLayout(container, BoxLayout.Y_AXIS));
+			gameFrame.add(container);
+		
+			
+			int playerss = 2;
+			final ArrayList<frames> playerList = new ArrayList<frames>();
+			for (int i = 0; i < playerss; i++) {
+				playerList.add(new frames());
+				
+			}
+			
+			for (frames frame : playerList) {
+				container.add(frame);
+			}
+			
+		//test
+			
+			frames player1 = playerList.get(0);
+			frames player2 = playerList.get(1);
+			
+					
+			JButton saveGame = new JButton("Save Game");
+			saveGame.addActionListener(new ActionListener() {
+				
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					System.out.println("Hello World");
+					saveGameGUI save = new saveGameGUI();
+					save.saveGameFrame(playerList);
+				}
+			});
+			
+			JButton mainMenu = new JButton("Main Menu");
+			mainMenu.addActionListener(new ActionListener() {
+				
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					mainMenuGUI mm = new mainMenuGUI();
+					mm.mainMenuFrame();
+					gameFrame.setVisible(false);
+					
+				}
+			});
+			container.add(mainMenu);
+			container.add(saveGame);
+			gameFrame.add(container);
+			gameFrame.setVisible(true);
+					
+			
+		}
+		
+		
+	}
+
+
+}

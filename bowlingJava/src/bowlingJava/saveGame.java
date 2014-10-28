@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class saveGame {
 	
-	public void save(ArrayList playerList){
+	public void save(@SuppressWarnings("rawtypes") ArrayList playerList, String gameName){
 		dbConnect connect = new dbConnect();
 		
 		
@@ -109,8 +109,8 @@ public class saveGame {
 		System.out.println(p2.toString());
 		
 		
-		connect.upload(p1);
-		connect.upload(p2);
+		connect.upload(p1, gameName);
+		connect.upload(p2, gameName);
 		
 		
 		

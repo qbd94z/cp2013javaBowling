@@ -1,0 +1,6 @@
+package bowlingJava;
+
+public class loadGame {
+	dbConnect connect = new dbConnect();
+
+}

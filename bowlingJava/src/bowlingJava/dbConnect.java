@@ -4,15 +4,11 @@ import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
 import com.mongodb.DBCollection;
 import com.mongodb.DBCursor;
-import com.mongodb.DBObject;
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
 
-import java.net.UnknownHostException;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Set;
-import java.util.Date;
 
 
 
@@ -86,7 +82,7 @@ public class dbConnect {
 //	}
 	
 	@SuppressWarnings("rawtypes")
-	public void upload(ArrayList player){
+	public void upload(ArrayList player, String gameName){
 		
 		try {
 			String dbURI = "mongodb://ben:test1234@kahana.mongohq.com:10098/cp2013Bowling";
@@ -96,7 +92,7 @@ public class dbConnect {
 			DB db = mongoClient.getDB("cp2013Bowling");
 			System.out.println("Database: " + db);
 			
-			coll = db.getCollection("test");
+			coll = db.getCollection(gameName);
 			System.out.println("Test Collection");
 			System.out.println(coll);
 			
@@ -150,7 +146,7 @@ public class dbConnect {
 	
 
 	}
-	public void download(){
+	public void download(String gameName){
 
 		try {
 			String dbURI = "mongodb://ben:test1234@kahana.mongohq.com:10098/cp2013Bowling";
@@ -160,7 +156,8 @@ public class dbConnect {
 			DB db = mongoClient.getDB("cp2013Bowling");
 			System.out.println("Database: " + db);
 			
-			coll = db.getCollection("test");
+			System.out.println("Collection: " + gameName);
+			coll = db.getCollection(gameName);
 			System.out.println("Test Collection");
 			System.out.println(coll);
 			
@@ -303,12 +300,43 @@ public class dbConnect {
 			
 			mongoClient.close();
 			
-			loadedGameGUI.setup(playerList);
+			loadedGameGUI.setup(playerList, gameName);
 	}catch (Exception e) {
 		System.out.println("Fail: " + e);
 		
 		
 	}
+	}
+	
+	public ArrayList getGames(){
+		try {
+			String dbURI = "mongodb://ben:test1234@kahana.mongohq.com:10098/cp2013Bowling";
+			MongoClient mongoClient = new MongoClient(new MongoClientURI(dbURI));
+			System.out.println("Connection: Successful");
+			
+			DB db = mongoClient.getDB("cp2013Bowling");
+			System.out.println("Database: " + db);
+			
+			Set<String> colls = db.getCollectionNames();
+			
+			ArrayList games = new ArrayList();
+			
+			for (String game : colls) {
+				System.out.println("Game Name: " + game);
+				games.add(game);
+				
+			}
+			
+			return games;
+			
+			}catch (Exception e) {
+				System.out.println("Fail: " + e);
+				
+				
+			}
+		return null;
+		
+		
 	}
 }
 
