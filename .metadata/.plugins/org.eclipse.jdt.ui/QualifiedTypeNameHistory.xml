@@ -3,7 +3,6 @@
 <fullyQualifiedTypeName name="java.net.UnknownHostException"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="com.mongodb.MongoClientURI"/>
-<fullyQualifiedTypeName name="com.mongodb.BasicDBObject"/>
 <fullyQualifiedTypeName name="com.mongodb.DBObject"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
@@ -16,7 +15,6 @@
 <fullyQualifiedTypeName name="bowlingJava.loadGameGUI"/>
 <fullyQualifiedTypeName name="javax.swing.JFrame"/>
 <fullyQualifiedTypeName name="javax.swing.JPanel"/>
-<fullyQualifiedTypeName name="bowlingJava.mainMenuGUI"/>
 <fullyQualifiedTypeName name="bowlingJava.frame"/>
 <fullyQualifiedTypeName name="java.awt.BorderLayout"/>
 <fullyQualifiedTypeName name="javax.swing.JLabel"/>
@@ -24,5 +22,14 @@
 <fullyQualifiedTypeName name="javax.swing.JButton"/>
 <fullyQualifiedTypeName name="java.awt.Dimension"/>
 <fullyQualifiedTypeName name="java.awt.List"/>
+<fullyQualifiedTypeName name="bowlingJava.dbConnect"/>
+<fullyQualifiedTypeName name="java.net.ConnectException"/>
+<fullyQualifiedTypeName name="bowlingJava.mainMenuGUI"/>
+<fullyQualifiedTypeName name="bowlingJava.saveGame"/>
+<fullyQualifiedTypeName name="java.sql.Savepoint"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.mongodb.BasicDBObject"/>
+<fullyQualifiedTypeName name="com.mongodb.DBCursor"/>
+<fullyQualifiedTypeName name="bowlingJava.gameGUI"/>
+<fullyQualifiedTypeName name="bowlingJava.loadedGameGUI"/>
 </qualifiedTypeNameHistroy>

@@ -1,0 +1,14 @@
+package bowlingJava;
+
+import javax.swing.JPanel;
+
+public class frames extends JPanel {
+
+	/**
+	 * Create the panel.
+	 */
+	public frames() {
+
+	}
+
+}

@@ -1,0 +1,15 @@
+package bowlingJava;
+
+import javax.swing.JPanel;
+
+public class frame {
+	
+	public void main() {
+		JPanel frame = new JPanel();	
+	}
+	
+	
+	public Object getFrame(){
+		return null;	
+		}
+}

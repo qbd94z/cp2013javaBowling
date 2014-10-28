@@ -5,7 +5,6 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 public class mainMenuGUI {
@@ -19,6 +18,7 @@ public class mainMenuGUI {
 			JButton newGame = new JButton("New Game");
 			newGame.addActionListener(new ActionListener() {
 				
+				@SuppressWarnings("static-access")
 				@Override
 				public void actionPerformed(ActionEvent e) {
 					System.out.println("Hello World");
@@ -31,15 +31,13 @@ public class mainMenuGUI {
 			
 			
 			
-			JButton saveGame = new JButton("Save Game");
-			saveGame.addActionListener(new ActionListener() {
+			JButton highScores = new JButton("High Scores");
+			highScores.addActionListener(new ActionListener() {
 				
 				@Override
 				public void actionPerformed(ActionEvent e) {
 					System.out.println("Hello World");
-					saveGameGUI save = new saveGameGUI();
-					save.saveGameFrame();
-					mainMenu.setVisible(false);
+
 					
 				}
 			});
@@ -48,6 +46,7 @@ public class mainMenuGUI {
 			JButton loadGame= new JButton("Load Game");
 			loadGame.addActionListener(new ActionListener() {
 				
+				@SuppressWarnings("static-access")
 				@Override
 				public void actionPerformed(ActionEvent e) {
 					System.out.println("Hello World");
@@ -71,7 +70,7 @@ public class mainMenuGUI {
 			
 			
 			mainMenuPanel.add(newGame);
-			mainMenuPanel.add(saveGame);
+			mainMenuPanel.add(highScores);
 			mainMenuPanel.add(loadGame);
 			mainMenuPanel.add(quit);
 			mainMenu.add(mainMenuPanel);

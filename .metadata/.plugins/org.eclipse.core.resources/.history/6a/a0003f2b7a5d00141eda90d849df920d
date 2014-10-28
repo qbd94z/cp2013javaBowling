@@ -1,0 +1,34 @@
+package bowlingJava;
+
+import java.util.ArrayList;
+
+public class saveGame {
+	
+	public void save(ArrayList playerList){
+		dbConnect connect = new dbConnect();
+		connect.connect();
+		
+		frames player1 = (frames) playerList.get(0);
+		frames player2 = (frames) playerList.get(1);
+		
+		System.out.println(player1.getName());
+		System.out.println(player2.getName());
+		
+		ArrayList<String> p1 = new ArrayList<String>();
+		p1.add(player1.getName());
+		p1.add(player1.getf1B1());
+		
+		for (String string : p1) {
+			System.out.println(string);
+			
+		}
+		
+		
+		
+	}
+	
+	
+	
+	
+	
+}

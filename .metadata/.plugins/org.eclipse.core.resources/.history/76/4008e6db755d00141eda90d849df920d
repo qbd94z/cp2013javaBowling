@@ -1,0 +1,15 @@
+package bowlingJava;
+
+public class saveGame {
+	
+	public void save(){
+		dbConnect connect = new dbConnect();
+		connect.connect();
+		
+	}
+	
+	
+	
+	
+	
+}

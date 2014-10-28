@@ -55,9 +55,5 @@ public class saveGameGUI {
 		saveGame.setVisible(true);
 	}
 	
-	public ArrayList<String> savePlayers(ArrayList playerList){
-		
-
-	}
 
 }

@@ -1,0 +1,176 @@
+package bowlingJava;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+
+public class tests extends JFrame {
+
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					tests frame = new tests();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	/**
+	 * 
+	 */
+	/**
+	 * 
+	 */
+	public tests() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 1179, 149);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel playername = new JLabel("playerName");
+		playername.setBounds(15, 16, 94, 20);
+		contentPane.add(playername);
+		
+		JLabel f1B1 = new JLabel("F1B1");
+		f1B1.setBounds(113, 16, 32, 20);
+		contentPane.add(f1B1);
+		
+		JLabel f1B2 = new JLabel("F1B2");
+		f1B2.setBounds(140, 16, 69, 20);
+		contentPane.add(f1B2);
+		
+		JLabel f1S = new JLabel("F1S");
+		f1S.setBounds(105, 40, 69, 20);
+		contentPane.add(f1S);
+		
+		JLabel f2B1 = new JLabel("F2B1");
+		f2B1.setBounds(186, 16, 42, 20);
+		contentPane.add(f2B1);
+		
+		JLabel f2B2 = new JLabel("F2B2");
+		f2B2.setBounds(243, 16, 42, 20);
+		contentPane.add(f2B2);
+		
+		JLabel f2S = new JLabel("F2S");
+		f2S.setBounds(196, 40, 69, 20);
+		contentPane.add(f2S);
+		
+		JLabel f3B1 = new JLabel("F3B1");
+		f3B1.setBounds(293, 16, 42, 20);
+		contentPane.add(f3B1);
+		
+		JLabel f3B2 = new JLabel("F3B2");
+		f3B2.setBounds(340, 16, 42, 20);
+		contentPane.add(f3B2);
+		
+		JLabel f3S = new JLabel("F3S");
+		f3S.setBounds(288, 40, 69, 20);
+		contentPane.add(f3S);
+		
+		JLabel f4B1 = new JLabel("B4F1");
+		f4B1.setBounds(397, 16, 42, 20);
+		contentPane.add(f4B1);
+		
+		JLabel lblBf_1 = new JLabel("B4F2");
+		lblBf_1.setBounds(440, 16, 42, 20);
+		contentPane.add(lblBf_1);
+		
+		JLabel lblFs_3 = new JLabel("F4S");
+		lblFs_3.setBounds(407, 40, 69, 20);
+		contentPane.add(lblFs_3);
+		
+		JLabel lblFb_5 = new JLabel("F5B1");
+		lblFb_5.setBounds(497, 16, 42, 20);
+		contentPane.add(lblFb_5);
+		
+		JLabel lblFb_6 = new JLabel("F5B2");
+		lblFb_6.setBounds(538, 16, 42, 20);
+		contentPane.add(lblFb_6);
+		
+		JLabel lblFs_4 = new JLabel("F5S");
+		lblFs_4.setBounds(491, 40, 69, 20);
+		contentPane.add(lblFs_4);
+		
+		JLabel lblFb_7 = new JLabel("F6B1");
+		lblFb_7.setBounds(595, 16, 42, 20);
+		contentPane.add(lblFb_7);
+		
+		JLabel lblFb_8 = new JLabel("F6B2");
+		lblFb_8.setBounds(638, 16, 42, 20);
+		contentPane.add(lblFb_8);
+		
+		JLabel lblFs_5 = new JLabel("F6S");
+		lblFs_5.setBounds(592, 40, 69, 20);
+		contentPane.add(lblFs_5);
+		
+		JLabel lblFb_9 = new JLabel("F7B1");
+		lblFb_9.setBounds(679, 16, 42, 20);
+		contentPane.add(lblFb_9);
+		
+		JLabel lblFb_10 = new JLabel("F7B2");
+		lblFb_10.setBounds(719, 16, 42, 20);
+		contentPane.add(lblFb_10);
+		
+		JLabel lblFs_6 = new JLabel("F7S");
+		lblFs_6.setBounds(689, 40, 69, 20);
+		contentPane.add(lblFs_6);
+		
+		JLabel lblFb_11 = new JLabel("F8B1");
+		lblFb_11.setBounds(776, 16, 42, 20);
+		contentPane.add(lblFb_11);
+		
+		JLabel lblFb_12 = new JLabel("F8B2");
+		lblFb_12.setBounds(818, 16, 42, 20);
+		contentPane.add(lblFb_12);
+		
+		JLabel lblFs_7 = new JLabel("F8S");
+		lblFs_7.setBounds(786, 40, 69, 20);
+		contentPane.add(lblFs_7);
+		
+		JLabel lblFb_13 = new JLabel("F9B1");
+		lblFb_13.setBounds(875, 16, 42, 20);
+		contentPane.add(lblFb_13);
+		
+		JLabel lblFb_14 = new JLabel("F9B2");
+		lblFb_14.setBounds(916, 16, 42, 20);
+		contentPane.add(lblFb_14);
+		
+		JLabel lblFs_8 = new JLabel("F9S");
+		lblFs_8.setBounds(870, 40, 69, 20);
+		contentPane.add(lblFs_8);
+		
+		JLabel lblFb_15 = new JLabel("F10B1");
+		lblFb_15.setBounds(973, 16, 50, 20);
+		contentPane.add(lblFb_15);
+		
+		JLabel lblFb_16 = new JLabel("F10B2");
+		lblFb_16.setBounds(1024, 16, 50, 20);
+		contentPane.add(lblFb_16);
+		
+		JLabel lblFb_17 = new JLabel("F10B3");
+		lblFb_17.setBounds(1073, 16, 50, 20);
+		contentPane.add(lblFb_17);
+		
+		JLabel lblFs_9 = new JLabel("F10S");
+		lblFs_9.setBounds(983, 40, 69, 20);
+		contentPane.add(lblFs_9);
+	}
+}

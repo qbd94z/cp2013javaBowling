@@ -20,6 +20,10 @@ public class loadGameGUI {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				System.out.println("Hello World");
+				loadGame load = new loadGame();
+				load.load();
+				
+				loadGame.setVisible(false);
 				
 			}
 		});
